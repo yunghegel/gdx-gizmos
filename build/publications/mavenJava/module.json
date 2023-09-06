@@ -1,0 +1,280 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.yunghegel.gdx",
+    "module": "gdx-gizmos",
+    "version": "0.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-freetype",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-freetype-platform",
+          "version": {
+            "requires": "1.12.0"
+          },
+          "thirdPartyCompatibility": {
+            "artifactSelector": {
+              "name": "gdx-freetype-platform",
+              "type": "jar",
+              "extension": "jar",
+              "classifier": "natives-desktop"
+            }
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-bullet",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.kotcrab.vis",
+          "module": "vis-ui",
+          "version": {
+            "requires": "1.5.2"
+          }
+        },
+        {
+          "group": "com.github.mgsx-dev.gdx-gltf",
+          "module": "gltf",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "gdx-gizmos-0.1-SNAPSHOT.jar",
+          "url": "gdx-gizmos-0.1-SNAPSHOT.jar",
+          "size": 54253,
+          "sha512": "3a10b50dc47777dba92b8802d5f5e8d1cc9cc32c8d5cf4bbbb09e129fe4ce81a675bf97c6f942d62ba9db68affac11439d9d43cbcf3f4d7c94699a024747da7c",
+          "sha256": "ce5a71337a83fe1933b92bb9327573b396dd35737e3d436db98f73fe3f9ae946",
+          "sha1": "0b0d008de77397160163164d9962e74d634be1a4",
+          "md5": "2393eaa4d0bf03d9e193b8797d21e0ac"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-backend-lwjgl3",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-platform",
+          "version": {
+            "requires": "1.12.0"
+          },
+          "thirdPartyCompatibility": {
+            "artifactSelector": {
+              "name": "gdx-platform",
+              "type": "jar",
+              "extension": "jar",
+              "classifier": "natives-desktop"
+            }
+          }
+        },
+        {
+          "group": "com.github.raeleus.stripe",
+          "module": "stripe",
+          "version": {
+            "requires": "1.4.5"
+          }
+        },
+        {
+          "group": "com.esotericsoftware.minlog",
+          "module": "minlog",
+          "version": {
+            "requires": "1.2"
+          }
+        },
+        {
+          "group": "com.github.crykn.guacamole",
+          "module": "core",
+          "version": {
+            "requires": "0.3.3"
+          }
+        },
+        {
+          "group": "com.github.crykn.guacamole",
+          "module": "gdx",
+          "version": {
+            "requires": "0.3.3"
+          }
+        },
+        {
+          "group": "com.github.crykn.guacamole",
+          "module": "gdx-desktop",
+          "version": {
+            "requires": "0.3.3"
+          }
+        },
+        {
+          "group": "com.github.tommyettinger",
+          "module": "libgdx-utils",
+          "version": {
+            "requires": "0.13.7"
+          }
+        },
+        {
+          "group": "com.github.raeleus.stripe",
+          "module": "freetype",
+          "version": {
+            "requires": "1.4.5"
+          }
+        },
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.10.1"
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-freetype",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-freetype-platform",
+          "version": {
+            "requires": "1.12.0"
+          },
+          "thirdPartyCompatibility": {
+            "artifactSelector": {
+              "name": "gdx-freetype-platform",
+              "type": "jar",
+              "extension": "jar",
+              "classifier": "natives-desktop"
+            }
+          }
+        },
+        {
+          "group": "com.badlogicgames.gdx",
+          "module": "gdx-bullet",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.kotcrab.vis",
+          "module": "vis-ui",
+          "version": {
+            "requires": "1.5.2"
+          }
+        },
+        {
+          "group": "com.github.mgsx-dev.gdx-gltf",
+          "module": "gltf",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "gdx-gizmos-0.1-SNAPSHOT.jar",
+          "url": "gdx-gizmos-0.1-SNAPSHOT.jar",
+          "size": 54253,
+          "sha512": "3a10b50dc47777dba92b8802d5f5e8d1cc9cc32c8d5cf4bbbb09e129fe4ce81a675bf97c6f942d62ba9db68affac11439d9d43cbcf3f4d7c94699a024747da7c",
+          "sha256": "ce5a71337a83fe1933b92bb9327573b396dd35737e3d436db98f73fe3f9ae946",
+          "sha1": "0b0d008de77397160163164d9962e74d634be1a4",
+          "md5": "2393eaa4d0bf03d9e193b8797d21e0ac"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "gdx-gizmos-0.1-SNAPSHOT-sources.jar",
+          "url": "gdx-gizmos-0.1-SNAPSHOT-sources.jar",
+          "size": 25874,
+          "sha512": "822c1c157cf963b4055ba9ba13042830e8d775913ded3dd139e697c0f97744c6be6f961cf0b8a65ed77e93da2f1347d3e52ef8a3bb69d4d52c71839c277ddf93",
+          "sha256": "675faf16c9a7d3d410dc9fdaa5a300acf112f25b543a62cf0c2f55fc4ab8ae4b",
+          "sha1": "ed93f7f7800514b04c1b393bf99e5875ca24735a",
+          "md5": "0b9770aaa5c6d1b798f320b1a00fe44f"
+        }
+      ]
+    }
+  ]
+}

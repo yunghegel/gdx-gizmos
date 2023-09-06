@@ -1,0 +1,32 @@
+
+group 'org.yunghegel.gdx'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    // Define dependencies for gdx-gizmos
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "yunghegelSnapshots" //REPOSITORY NAME
+            url = uri("https://repo.yunghegel.org/snapshots") //REPOSITORY URL
+            credentials(PasswordCredentials)
+            authentication {
+                basic(BasicAuthentication)
+            }
+        }
+    }
+
+    publications {
+        mavenJava(MavenPublication) {
+                groupId = "org.yunghegel.gdx"
+                artifactId = "gdx-gizmos"
+                version ="0.1-SNAPSHOT"
+                from components.java
+        }
+    }
+}
+
+
+// Other configurations specific to gdx-gizmos
