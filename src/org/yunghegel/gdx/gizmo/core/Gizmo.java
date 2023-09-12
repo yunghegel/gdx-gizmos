@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import org.yunghegel.gdx.gizmo.picker.ToolPicker;
+import org.yunghegel.gdx.gizmo.ToolPicker;
 
 
 public abstract class Gizmo extends InputAdapter implements Disposable {

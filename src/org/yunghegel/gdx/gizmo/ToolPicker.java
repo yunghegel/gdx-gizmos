@@ -1,4 +1,4 @@
-package org.yunghegel.gdx.gizmo.picker;
+package org.yunghegel.gdx.gizmo;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.*;
@@ -10,6 +10,7 @@ import com.badlogic.gdx.utils.BufferUtils;
 import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import org.yunghegel.gdx.gizmo.core.transform.GizmoHandle;
+import org.yunghegel.gdx.picking.PickerColorEncoder;
 
 import java.nio.ByteBuffer;
 import java.util.logging.Logger;

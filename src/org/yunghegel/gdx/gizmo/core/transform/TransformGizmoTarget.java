@@ -4,9 +4,8 @@ import com.badlogic.gdx.math.Matrix4;
 import com.badlogic.gdx.math.Quaternion;
 import com.badlogic.gdx.math.Vector3;
 import org.yunghegel.gdx.gizmo.core.GizmoTarget;
-import org.yunghegel.gdx.gizmo.graph.Spatial;
 
-public class TransformGizmoTarget extends GizmoTarget<Spatial> {
+public class TransformGizmoTarget extends GizmoTarget<TransformTarget> {
 
     public Matrix4 transform;
 
@@ -23,41 +22,14 @@ public class TransformGizmoTarget extends GizmoTarget<Spatial> {
 
 
     public TransformGizmoTarget(TransformTarget target){
-        this(target.getTransform());
+        super(target);
         this.target = target;
     }
 
-    public TransformGizmoTarget(Spatial target){
+    public TransformGizmoTarget(TransformTarget target, TransformAction action){
         super(target);
-        transform = target.getTransform();
-    }
-
-    public TransformGizmoTarget(Matrix4 target){
-        super(new Spatial(target));
-        transform = target;
-    }
-
-    public TransformGizmoTarget(Vector3 pos){
-        super(new Spatial(new Matrix4().setToTranslation(pos)));
-        transform = target.getTransform();
-    }
-
-    public TransformGizmoTarget(Spatial spatial, TransformAction action){
-        super(spatial);
-        transform = target.getTransform();
-        setAction(action);
-    }
-
-    public TransformGizmoTarget(Matrix4 transform, TransformAction action){
-        super(new Spatial(transform));
-        this.transform = transform;
-        setAction(action);
-    }
-
-    public TransformGizmoTarget(Vector3 pos, TransformAction action){
-        super(new Spatial(new Matrix4().setToTranslation(pos)));
-        transform = target.getTransform();
-        setAction(action);
+        this.target = target;
+        this.action = action;
     }
 
     public void setAction(TransformAction action){
@@ -67,6 +39,7 @@ public class TransformGizmoTarget extends GizmoTarget<Spatial> {
     @Override
     public void apply() {
         target.apply();
+        if(action != null) action.apply(transform);
     }
 
     public void translate(Vector3 vec) {
