@@ -11,9 +11,9 @@ import com.badlogic.gdx.math.Quaternion;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.Disposable;
 import org.yunghegel.gdx.gizmo.core.GizmoTarget;
-import org.yunghegel.gdx.gizmo.picker.PickerColorEncoder;
-import org.yunghegel.gdx.gizmo.picker.PickerIDAttribute;
-import org.yunghegel.gdx.gizmo.picker.PickerShader;
+import org.yunghegel.gdx.picking.PickerColorEncoder;
+import org.yunghegel.gdx.picking.PickerIDAttribute;
+import org.yunghegel.gdx.picking.PickerShader;
 
 
 public abstract class GizmoHandle<T extends GizmoTarget<T>> implements Disposable {

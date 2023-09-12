@@ -9,7 +9,8 @@ import org.yunghegel.gdx.gizmo.core.Gizmo;
 import org.yunghegel.gdx.gizmo.core.GizmoGroup;
 import org.yunghegel.gdx.gizmo.core.GizmoTarget;
 import org.yunghegel.gdx.gizmo.core.GizmoType;
-import org.yunghegel.gdx.gizmo.graph.Spatial;
+import org.yunghegel.gdx.scenegraph.scene3d.GameObject;
+
 
 import java.util.ArrayList;
 
@@ -23,7 +24,7 @@ public abstract class TransformGizmo extends Gizmo implements GizmoGroup<Transfo
         super(inputMultiplexer, batch, camera, viewport, toggleKey,type);
         add(this);
 
-        TransformGizmoTarget target = new TransformGizmoTarget(new Spatial(new Matrix4()));
+        target = new TransformGizmoTarget(new BasicTransformTarget(new Matrix4()));
 
         setTarget(target);
     }

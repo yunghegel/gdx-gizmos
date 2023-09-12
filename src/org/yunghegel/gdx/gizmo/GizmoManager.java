@@ -1,4 +1,4 @@
-package org.yunghegel.gdx.gizmo.core;
+package org.yunghegel.gdx.gizmo;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -6,6 +6,10 @@ import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import org.yunghegel.gdx.gizmo.core.Gizmo;
+import org.yunghegel.gdx.gizmo.core.GizmoCategory;
+import org.yunghegel.gdx.gizmo.core.GizmoTarget;
+import org.yunghegel.gdx.gizmo.core.GizmoType;
 import org.yunghegel.gdx.gizmo.core.transform.RotateGizmo;
 import org.yunghegel.gdx.gizmo.core.transform.ScaleGizmo;
 import org.yunghegel.gdx.gizmo.core.transform.TransformGizmoTarget;
