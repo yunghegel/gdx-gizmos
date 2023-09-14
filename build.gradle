@@ -1,10 +1,16 @@
+buildscript {
 
+}
 group 'org.yunghegel.gdx'
 version '1.0-SNAPSHOT'
 
+
 dependencies {
-    // Define dependencies for gdx-gizmos
+//    implementation "org.yunghegel.gdx:gdx-picking:$gdxYungUtilsVersion"
+    implementation "org.yunghegel.gdx:gdx-picking:$gdxPickingVersion"
 }
+
+
 
 publishing {
     repositories {

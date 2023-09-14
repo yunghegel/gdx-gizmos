@@ -10,7 +10,7 @@
   },
   "createdBy": {
     "gradle": {
-      "version": "8.2"
+      "version": "8.3"
     }
   },
   "variants": [
@@ -88,11 +88,11 @@
         {
           "name": "gdx-gizmos-0.1-SNAPSHOT.jar",
           "url": "gdx-gizmos-0.1-SNAPSHOT.jar",
-          "size": 54251,
-          "sha512": "78309919ee4b255180a537103b50a43f528265d6a8bf4659d0a51727d3ce4790c175151d27f1ebecbeaf791fefe2dae5cbe56343cad7600fb04cb75d01ea6fc2",
-          "sha256": "6d0a72ccf2aeba3a6a34b0269c3e9faff791986d61fadb9944a86d0cfe44cc50",
-          "sha1": "a4306d93c4ae839502606b473e6a6d020c3eb478",
-          "md5": "011f75867e547831ccfec9cbff6d7592"
+          "size": 45418,
+          "sha512": "3ce95986df139c00e0c039c055f68ed67df60b5e12afd1b39100b7a3f31777189b75a7eef69722fe4797b59d585598109630529e070b166245098bdcd727440d",
+          "sha256": "034df65397afca8f2141aa83cea82830f75268c64c921ce81a2ca6f71c782371",
+          "sha1": "334bd7f0a1ed53dc25a131128d4751852d6fbea4",
+          "md5": "d34af906e3339051a1be8d8f16d5d217"
         }
       ]
     },
@@ -187,6 +187,13 @@
           }
         },
         {
+          "group": "org.yunghegel.gdx",
+          "module": "gdx-picking",
+          "version": {
+            "requires": "0.2-SNAPSHOT"
+          }
+        },
+        {
           "group": "com.badlogicgames.gdx",
           "module": "gdx",
           "version": {
@@ -248,11 +255,11 @@
         {
           "name": "gdx-gizmos-0.1-SNAPSHOT.jar",
           "url": "gdx-gizmos-0.1-SNAPSHOT.jar",
-          "size": 54251,
-          "sha512": "78309919ee4b255180a537103b50a43f528265d6a8bf4659d0a51727d3ce4790c175151d27f1ebecbeaf791fefe2dae5cbe56343cad7600fb04cb75d01ea6fc2",
-          "sha256": "6d0a72ccf2aeba3a6a34b0269c3e9faff791986d61fadb9944a86d0cfe44cc50",
-          "sha1": "a4306d93c4ae839502606b473e6a6d020c3eb478",
-          "md5": "011f75867e547831ccfec9cbff6d7592"
+          "size": 45418,
+          "sha512": "3ce95986df139c00e0c039c055f68ed67df60b5e12afd1b39100b7a3f31777189b75a7eef69722fe4797b59d585598109630529e070b166245098bdcd727440d",
+          "sha256": "034df65397afca8f2141aa83cea82830f75268c64c921ce81a2ca6f71c782371",
+          "sha1": "334bd7f0a1ed53dc25a131128d4751852d6fbea4",
+          "md5": "d34af906e3339051a1be8d8f16d5d217"
         }
       ]
     },
@@ -268,11 +275,11 @@
         {
           "name": "gdx-gizmos-0.1-SNAPSHOT-sources.jar",
           "url": "gdx-gizmos-0.1-SNAPSHOT-sources.jar",
-          "size": 25874,
-          "sha512": "c187dadc3ec8c912db34f64080e3038ca8f3da3e28fc1eb81db33f7881e18bdf0c17f4456f94ecc17625d20a8c57502ba9ca417f0ba682dbec3afee8aecca847",
-          "sha256": "0913edaab2d03dc75aa2d0045685943c8bf0834907e0f5a9ba170ebca398827e",
-          "sha1": "ff3e44c51160bb270cd4281f8e0ad23dc16d30e7",
-          "md5": "f5cc172e5605970848b98922597cc62a"
+          "size": 20495,
+          "sha512": "eaedce7014609f97e7bd2732c7f804746c429186da2f3677774cb0e67f696c332ce6db528a0be20961a5ac26fd9cf8e370e4b6373e9bb7b741cdd0ed157217ad",
+          "sha256": "144ba2d595364f67db0977d9cb4a4239180c6398c21d669d3eda336d2ef5d892",
+          "sha1": "c3fd03ae79b129eb1d13d8978215a8cd1ed0a50f",
+          "md5": "9d5e9c405852874b17333dc2974b1162"
         }
       ]
     }

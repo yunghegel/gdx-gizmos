@@ -19,8 +19,11 @@ import com.badlogic.gdx.graphics.g3d.utils.MeshPartBuilder;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.graphics.g3d.utils.shapebuilders.ArrowShapeBuilder;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.math.collision.BoundingBox;
+import com.badlogic.gdx.scenes.scene2d.ui.Widget;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import org.yunghegel.gdx.gizmo.core.Gizmo;
 import org.yunghegel.gdx.gizmo.core.GizmoTarget;
@@ -93,6 +96,12 @@ public class CompassGizmo extends Gizmo {
         compassSphere.transform.setTranslation(position);
     }
 
+    public void setPosition(Vector2 pos){
+        setPosition(pos.x,pos.y);
+    }
+
+
+
 
     Vector3 projCompassPos = new Vector3();
     @Override
@@ -108,6 +117,10 @@ public class CompassGizmo extends Gizmo {
             renderArrows();
         } else
             renderSquares();
+    }
+
+    public void renderCompass(){
+
     }
 
     @Override
@@ -128,6 +141,7 @@ public class CompassGizmo extends Gizmo {
 //        localCam.viewportWidth = Gdx.graphics.getWidth();
 //        localCam.viewportHeight = Gdx.graphics.getHeight();
         Gdx.gl.glViewport(0,0,Gdx.graphics.getWidth(),Gdx.graphics.getHeight());
+
         batch.render(compass);
         if(drawSphere)
             batch.render(compassSphere);
@@ -189,6 +203,7 @@ public class CompassGizmo extends Gizmo {
     @Override
     public void update() {
 
+
         compass.transform.getTranslation(tempv3);
 
         compass.transform.set(camera.view);
@@ -204,4 +219,8 @@ public class CompassGizmo extends Gizmo {
         compass.model.dispose();
 
     }
+
+
+
+
 }

@@ -9,7 +9,7 @@ import org.yunghegel.gdx.gizmo.core.Gizmo;
 import org.yunghegel.gdx.gizmo.core.GizmoGroup;
 import org.yunghegel.gdx.gizmo.core.GizmoTarget;
 import org.yunghegel.gdx.gizmo.core.GizmoType;
-import org.yunghegel.gdx.scenegraph.scene3d.GameObject;
+
 
 
 import java.util.ArrayList;
