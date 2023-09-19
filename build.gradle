@@ -2,7 +2,7 @@ buildscript {
 
 }
 group 'org.yunghegel.gdx'
-version '1.0-SNAPSHOT'
+version "$gdxGizmosVersion"
 
 
 dependencies {
@@ -28,7 +28,7 @@ publishing {
         mavenJava(MavenPublication) {
                 groupId = "org.yunghegel.gdx"
                 artifactId = "gdx-gizmos"
-                version ="0.1-SNAPSHOT"
+                version =version
                 from components.java
         }
     }

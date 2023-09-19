@@ -3,7 +3,7 @@
   "component": {
     "group": "org.yunghegel.gdx",
     "module": "gdx-gizmos",
-    "version": "0.1-SNAPSHOT",
+    "version": "0.3-SNAPSHOT",
     "attributes": {
       "org.gradle.status": "integration"
     }
@@ -19,11 +19,9 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.environment": "standard-jvm",
-        "org.gradle.jvm.version": 17,
+        "org.gradle.jvm.version": 11,
         "org.gradle.libraryelements": "jar",
-        "org.gradle.usage": "java-api",
-        "org.jetbrains.kotlin.platform.type": "jvm"
+        "org.gradle.usage": "java-api"
       },
       "dependencies": [
         {
@@ -75,24 +73,17 @@
           "version": {
             "requires": "2.1.0"
           }
-        },
-        {
-          "group": "org.jetbrains.kotlin",
-          "module": "kotlin-stdlib-jdk8",
-          "version": {
-            "requires": "1.9.0"
-          }
         }
       ],
       "files": [
         {
-          "name": "gdx-gizmos-0.1-SNAPSHOT.jar",
-          "url": "gdx-gizmos-0.1-SNAPSHOT.jar",
-          "size": 45418,
-          "sha512": "3ce95986df139c00e0c039c055f68ed67df60b5e12afd1b39100b7a3f31777189b75a7eef69722fe4797b59d585598109630529e070b166245098bdcd727440d",
-          "sha256": "034df65397afca8f2141aa83cea82830f75268c64c921ce81a2ca6f71c782371",
-          "sha1": "334bd7f0a1ed53dc25a131128d4751852d6fbea4",
-          "md5": "d34af906e3339051a1be8d8f16d5d217"
+          "name": "gdx-gizmos-0.3-SNAPSHOT.jar",
+          "url": "gdx-gizmos-0.3-SNAPSHOT.jar",
+          "size": 44747,
+          "sha512": "14300bc21763ce65710a3b32afc23d280a16b8dab0a27e69d65e4fb2af6aae1a8bd978b6485a0c2f657fc70086229816d0ba4b206549ce9686fa24ad69a0456d",
+          "sha256": "6f782aa4789b388881ac25f67466647bbb229838d406356dd5ae132ca31af61d",
+          "sha1": "7098be715bda52265241a1880aece3b7bf4f1bfc",
+          "md5": "9e33cbf57ce28d9c9341dbf7076dd08d"
         }
       ]
     },
@@ -101,11 +92,9 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.environment": "standard-jvm",
-        "org.gradle.jvm.version": 17,
+        "org.gradle.jvm.version": 11,
         "org.gradle.libraryelements": "jar",
-        "org.gradle.usage": "java-runtime",
-        "org.jetbrains.kotlin.platform.type": "jvm"
+        "org.gradle.usage": "java-runtime"
       },
       "dependencies": [
         {
@@ -187,10 +176,24 @@
           }
         },
         {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-gradle-plugin",
+          "version": {
+            "requires": "1.9.0"
+          }
+        },
+        {
+          "group": "org.apache.commons",
+          "module": "commons-lang3",
+          "version": {
+            "requires": "3.12.0"
+          }
+        },
+        {
           "group": "org.yunghegel.gdx",
           "module": "gdx-picking",
           "version": {
-            "requires": "0.2-SNAPSHOT"
+            "requires": "0.3-SNAPSHOT"
           }
         },
         {
@@ -242,24 +245,17 @@
           "version": {
             "requires": "2.1.0"
           }
-        },
-        {
-          "group": "org.jetbrains.kotlin",
-          "module": "kotlin-stdlib-jdk8",
-          "version": {
-            "requires": "1.9.0"
-          }
         }
       ],
       "files": [
         {
-          "name": "gdx-gizmos-0.1-SNAPSHOT.jar",
-          "url": "gdx-gizmos-0.1-SNAPSHOT.jar",
-          "size": 45418,
-          "sha512": "3ce95986df139c00e0c039c055f68ed67df60b5e12afd1b39100b7a3f31777189b75a7eef69722fe4797b59d585598109630529e070b166245098bdcd727440d",
-          "sha256": "034df65397afca8f2141aa83cea82830f75268c64c921ce81a2ca6f71c782371",
-          "sha1": "334bd7f0a1ed53dc25a131128d4751852d6fbea4",
-          "md5": "d34af906e3339051a1be8d8f16d5d217"
+          "name": "gdx-gizmos-0.3-SNAPSHOT.jar",
+          "url": "gdx-gizmos-0.3-SNAPSHOT.jar",
+          "size": 44747,
+          "sha512": "14300bc21763ce65710a3b32afc23d280a16b8dab0a27e69d65e4fb2af6aae1a8bd978b6485a0c2f657fc70086229816d0ba4b206549ce9686fa24ad69a0456d",
+          "sha256": "6f782aa4789b388881ac25f67466647bbb229838d406356dd5ae132ca31af61d",
+          "sha1": "7098be715bda52265241a1880aece3b7bf4f1bfc",
+          "md5": "9e33cbf57ce28d9c9341dbf7076dd08d"
         }
       ]
     },
@@ -273,13 +269,13 @@
       },
       "files": [
         {
-          "name": "gdx-gizmos-0.1-SNAPSHOT-sources.jar",
-          "url": "gdx-gizmos-0.1-SNAPSHOT-sources.jar",
-          "size": 20495,
-          "sha512": "eaedce7014609f97e7bd2732c7f804746c429186da2f3677774cb0e67f696c332ce6db528a0be20961a5ac26fd9cf8e370e4b6373e9bb7b741cdd0ed157217ad",
-          "sha256": "144ba2d595364f67db0977d9cb4a4239180c6398c21d669d3eda336d2ef5d892",
-          "sha1": "c3fd03ae79b129eb1d13d8978215a8cd1ed0a50f",
-          "md5": "9d5e9c405852874b17333dc2974b1162"
+          "name": "gdx-gizmos-0.3-SNAPSHOT-sources.jar",
+          "url": "gdx-gizmos-0.3-SNAPSHOT-sources.jar",
+          "size": 20566,
+          "sha512": "5c7cedf8708df8f130aadf0907921839b963294c3920698e9a30c9f833f0390058e75b2dc842fef77c0f7c2ae184823eb67f3c0d2693042cbf27d30df06c90bb",
+          "sha256": "27a726e54dff0cb838fcfcd24813d5138059ea318aa3a85c54bc02ddf2afac93",
+          "sha1": "c55c4255dddf9f06bb666d36921d5019cb182aea",
+          "md5": "0bedbdeb639830fe0c92a0e33ba070de"
         }
       ]
     }

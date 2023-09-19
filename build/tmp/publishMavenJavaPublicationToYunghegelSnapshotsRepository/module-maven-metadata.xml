@@ -3,12 +3,11 @@
   <groupId>org.yunghegel.gdx</groupId>
   <artifactId>gdx-gizmos</artifactId>
   <versioning>
-    <latest>0.1-SNAPSHOT</latest>
+    <latest>0.3-SNAPSHOT</latest>
     <versions>
-      <version>1.1-SNAPSHOT</version>
-      <version>0.1-SNAPSHOT</version>
       <version>0.2-SNAPSHOT</version>
+      <version>0.3-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20230914071451</lastUpdated>
+    <lastUpdated>20230919094834</lastUpdated>
   </versioning>
 </metadata>

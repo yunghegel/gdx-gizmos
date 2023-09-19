@@ -2,34 +2,34 @@
 <metadata modelVersion="1.1.0">
   <groupId>org.yunghegel.gdx</groupId>
   <artifactId>gdx-gizmos</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.3-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20230914.071449</timestamp>
-      <buildNumber>18</buildNumber>
+      <timestamp>20230919.094832</timestamp>
+      <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20230914071449</lastUpdated>
+    <lastUpdated>20230919094832</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
+        <extension>jar</extension>
+        <value>0.3-20230919.094832-1</value>
+        <updated>20230919094832</updated>
+      </snapshotVersion>
+      <snapshotVersion>
         <extension>module</extension>
-        <value>0.1-20230914.071449-18</value>
-        <updated>20230914071449</updated>
+        <value>0.3-20230919.094832-1</value>
+        <updated>20230919094832</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.3-20230919.094832-1</value>
+        <updated>20230919094832</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>0.1-20230914.071449-18</value>
-        <updated>20230914071449</updated>
-      </snapshotVersion>
-      <snapshotVersion>
-        <extension>pom</extension>
-        <value>0.1-20230914.071449-18</value>
-        <updated>20230914071449</updated>
-      </snapshotVersion>
-      <snapshotVersion>
-        <extension>jar</extension>
-        <value>0.1-20230914.071449-18</value>
-        <updated>20230914071449</updated>
+        <value>0.3-20230919.094832-1</value>
+        <updated>20230919094832</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
