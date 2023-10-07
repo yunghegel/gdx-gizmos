@@ -31,7 +31,7 @@ public class Util {
         ModelBuilder modelBuilder = new ModelBuilder();
         modelBuilder.begin();
         MeshPartBuilder builder = modelBuilder.part("torus", GL20.GL_TRIANGLES, VertexAttributes.Usage.Position, mat);
-        // builder.setColor(Color.LIGHT_GRAY);
+        // builder.setColor(Ansi.LIGHT_GRAY);
 
         MeshPartBuilder.VertexInfo curr1 = v0.set(null, null, null, null);
         curr1.hasUV = curr1.hasNormal = false;

@@ -39,15 +39,15 @@ public class CompassGizmo extends Gizmo {
     ShapeRenderer shapeRenderer;
 
     public boolean useArrows = true;
-    public boolean drawSphere = false;
+    public boolean drawSphere = true;
 
 
 
 
-    private float ARROW_LENGTH = 0.06f;
-    private float ARROW_THIKNESS = .3f;
-    private float ARROW_CAP_SIZE = .15f;
-    private float SPHERE_SIZE = 0.13f;
+    private float ARROW_LENGTH = 0.045f;
+    private float ARROW_THIKNESS = .23f;
+    private float ARROW_CAP_SIZE = .14f;
+    private float SPHERE_SIZE = 0.09f;
     private int ARROW_DIVISIONS = 15;
 
     public Vector3 position = new Vector3(.9f,.9f,0);
@@ -213,6 +213,8 @@ public class CompassGizmo extends Gizmo {
         localCam.viewportWidth= camera.viewportWidth;
 //        localCam.update();
     }
+
+
 
     @Override
     public void dispose() {
