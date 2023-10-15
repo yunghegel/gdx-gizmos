@@ -1,6 +1,4 @@
-buildscript {
 
-}
 group 'org.yunghegel.gdx'
 version "$gdxGizmosVersion"
 
@@ -8,6 +6,8 @@ version "$gdxGizmosVersion"
 dependencies {
 //    implementation "org.yunghegel.gdx:gdx-picking:$gdxYungUtilsVersion"
     implementation "org.yunghegel.gdx:gdx-picking:$gdxPickingVersion"
+
+    implementation 'com.github.czyzby:gdx-kiwi:1.9.1.9.6'
 }
 
 
