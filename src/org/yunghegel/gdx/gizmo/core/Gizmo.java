@@ -30,6 +30,8 @@ public abstract class Gizmo extends InputAdapter implements Disposable {
     protected static final int Z_HANDLE_ID = 3;
     protected static final int XYZ_HANDLE_ID = 4;
 
+    public boolean interacting = false;
+
     public static int TOGGLE_KEY=-1;
 
 
@@ -83,7 +85,7 @@ public abstract class Gizmo extends InputAdapter implements Disposable {
 
     public abstract void disable();
 
-    public abstract void update();
+    public abstract void update(GizmoTarget target);
 
     public void toggle(GizmoTarget target){
         if(enabled){

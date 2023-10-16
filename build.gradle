@@ -5,9 +5,8 @@ version "$gdxGizmosVersion"
 
 dependencies {
 //    implementation "org.yunghegel.gdx:gdx-picking:$gdxYungUtilsVersion"
-    implementation "org.yunghegel.gdx:gdx-picking:$gdxPickingVersion"
+    implementation project(':gdx-picking')
 
-    implementation 'com.github.czyzby:gdx-kiwi:1.9.1.9.6'
 }
 
 
@@ -33,6 +32,8 @@ publishing {
         }
     }
 }
+
+
 
 
 // Other configurations specific to gdx-gizmos

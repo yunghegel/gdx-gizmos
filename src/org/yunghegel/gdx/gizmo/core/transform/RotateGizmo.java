@@ -15,6 +15,7 @@ import com.badlogic.gdx.math.collision.Ray;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import org.yunghegel.gdx.gizmo.Util;
 import org.yunghegel.gdx.gizmo.core.Gizmo;
+import org.yunghegel.gdx.gizmo.core.GizmoTarget;
 import org.yunghegel.gdx.gizmo.core.GizmoType;
 
 public class RotateGizmo extends TransformGizmo {
@@ -36,6 +37,7 @@ public class RotateGizmo extends TransformGizmo {
     double dst = 0;
 
     public boolean initRotate = true;
+
 
     public RotateGizmo(InputMultiplexer inputMultiplexer, ModelBatch batch, Camera camera, Viewport viewport,int toggleKey) {
         super(inputMultiplexer, batch, camera, viewport, toggleKey, GizmoType.ROTATE);
@@ -72,8 +74,8 @@ public class RotateGizmo extends TransformGizmo {
     }
 
     @Override
-    public void update() {
-
+    public void update(GizmoTarget gizmoTarget) {
+        this.target = (TransformGizmoTarget) gizmoTarget;
         if(!enabled) return;
         for (RotateHandle handle : handles) {
             handle.update(target.getTransform(),camera);
@@ -128,7 +130,7 @@ public class RotateGizmo extends TransformGizmo {
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == 0 && target !=null) {
-
+            interacting = true;
             RotateHandle handle = (RotateHandle) picker.pick(viewport,batch,camera,screenX,screenY,handles);
             if (handle != null) {
                 state = TransformState.IDLE;
@@ -163,6 +165,7 @@ public class RotateGizmo extends TransformGizmo {
         for(RotateHandle handle : handles){
             handle.restoreColor();
         }
+        interacting = false;
         Gdx.input.setInputProcessor(inputs);
         return super.touchUp(screenX, screenY, pointer, button);
     }

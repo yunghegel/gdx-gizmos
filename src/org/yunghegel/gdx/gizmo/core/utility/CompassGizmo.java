@@ -3,10 +3,7 @@ package org.yunghegel.gdx.gizmo.core.utility;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
-import com.badlogic.gdx.graphics.Camera;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.PerspectiveCamera;
-import com.badlogic.gdx.graphics.VertexAttributes;
+import com.badlogic.gdx.graphics.*;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g3d.Material;
@@ -29,7 +26,7 @@ import org.yunghegel.gdx.gizmo.core.Gizmo;
 import org.yunghegel.gdx.gizmo.core.GizmoTarget;
 import org.yunghegel.gdx.gizmo.core.GizmoType;
 
-public class CompassGizmo extends Gizmo {
+public class CompassGizmo  {
 
     public ModelInstance compass;
     ModelInstance compassSphere;
@@ -39,8 +36,24 @@ public class CompassGizmo extends Gizmo {
     ShapeRenderer shapeRenderer;
 
     public boolean useArrows = true;
-    public boolean drawSphere = true;
+    public boolean drawSphere = false;
+    public boolean enabled = true;
 
+    protected static Color COLOR_X = new Color(.8f,0,0,1);
+    protected static Color COLOR_Y = new Color(0,.8f,0,1);
+    protected static Color COLOR_Z = Color.valueOf("#0074F7");
+    protected static Color COLOR_XYZ = new Color(0,.8f,.8f,1);
+
+    protected static Color COLOR_X_SELECTED = Color.RED;
+    protected static Color COLOR_Y_SELECTED = Color.GREEN;
+    protected static Color COLOR_Z_SELECTED = Color.BLUE;
+    protected static Color COLOR_XYZ_SELECTED = Color.CYAN;
+
+
+    protected static final int X_HANDLE_ID = 1;
+    protected static final int Y_HANDLE_ID = 2;
+    protected static final int Z_HANDLE_ID = 3;
+    protected static final int XYZ_HANDLE_ID = 4;
 
 
 
@@ -56,9 +69,19 @@ public class CompassGizmo extends Gizmo {
     public PerspectiveCamera localCam = new PerspectiveCamera();
 
 
+    ModelBatch batch;
+    Camera camera;
+    Viewport viewport;
+    InputMultiplexer inputMultiplexer;
+    int toggleKey;
 
     public CompassGizmo(InputMultiplexer inputMultiplexer, ModelBatch batch, Camera camera, Viewport viewport, int toggleKey) {
-        super(inputMultiplexer, batch, camera, viewport, toggleKey, GizmoType.COMPASS);
+        this.inputMultiplexer = inputMultiplexer;
+        this.batch = batch;
+        this.camera = camera;
+        this.viewport = viewport;
+        this.toggleKey = toggleKey;
+
         shapeRenderer = new ShapeRenderer();
 
         shapeRenderer.setAutoShapeType(true);
@@ -104,7 +127,7 @@ public class CompassGizmo extends Gizmo {
 
 
     Vector3 projCompassPos = new Vector3();
-    @Override
+
     public void render(ModelBatch batch) {
         if(!enabled)return;
 
@@ -123,13 +146,7 @@ public class CompassGizmo extends Gizmo {
 
     }
 
-    @Override
-    public void enable(GizmoTarget target) {
-        if(target instanceof CompassTarget){
-            this.target = (CompassTarget) target;
-        } else{
-            Gdx.app.error("CompassGizmo","Target must be of type CompassTarget");
-        }
+    public void enable() {
         enabled = true;
     }
 
@@ -191,7 +208,7 @@ public class CompassGizmo extends Gizmo {
         Gdx.gl.glEnable(GL20.GL_BLEND);
     }
 
-    @Override
+
     public void disable() {
         enabled = false;
 
@@ -200,7 +217,7 @@ public class CompassGizmo extends Gizmo {
 
     public static Vector2 vec = new Vector2();
 
-    @Override
+
     public void update() {
 
 
@@ -216,7 +233,7 @@ public class CompassGizmo extends Gizmo {
 
 
 
-    @Override
+
     public void dispose() {
         compass.model.dispose();
 

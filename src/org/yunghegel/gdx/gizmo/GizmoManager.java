@@ -50,7 +50,7 @@ public class GizmoManager {
         scaleGizmo = new ScaleGizmo(inputMultiplexer, batch, camera, viewport,TOGGLE_SCALE_GIZMO_KEY);
         compassGizmo = new CompassGizmo(inputMultiplexer, batch, camera, viewport,TOGGLE_COMPASS_GIZMO_KEY);
 
-        gizmos = new Gizmo[]{translateGizmo, rotateGizmo, scaleGizmo, compassGizmo};
+        gizmos = new Gizmo[]{translateGizmo, rotateGizmo, scaleGizmo};
         gizmoMap.put(GizmoType.NULL, null);
 
         for(Gizmo gizmo : gizmos){
@@ -68,7 +68,7 @@ public class GizmoManager {
         scaleGizmo = new ScaleGizmo(inputMultiplexer, batch, camera, viewport,TOGGLE_SCALE_GIZMO_KEY);
         compassGizmo = new CompassGizmo(inputMultiplexer, batch, camera, viewport,TOGGLE_COMPASS_GIZMO_KEY);
 
-        gizmos = new Gizmo[]{translateGizmo, rotateGizmo, scaleGizmo, compassGizmo};
+        gizmos = new Gizmo[]{translateGizmo, rotateGizmo, scaleGizmo};
         gizmoMap.put(GizmoType.NULL, null);
 
         for(Gizmo gizmo : gizmos){
@@ -107,9 +107,7 @@ public class GizmoManager {
             case SCALE:
                 scaleGizmo.setTarget(target);
                 break;
-            case COMPASS:
-                compassGizmo.setTarget(target);
-                break;
+
         }
     }
 
@@ -125,7 +123,7 @@ public class GizmoManager {
 
         for(Gizmo gizmo : gizmos){
             if(gizmo.enabled){
-                gizmo.update();
+                gizmo.update(gizmoTarget);
             }
         }
     }
@@ -164,9 +162,8 @@ public class GizmoManager {
             case SCALE:
                 scaleGizmo.toggle(target);
                 break;
-            case COMPASS:
-                compassGizmo.toggle(target);
-                break;
+
+
         }
     }
 
@@ -203,9 +200,8 @@ public class GizmoManager {
             case SCALE:
                 scaleGizmo.setToggleKey(key);
                 break;
-            case COMPASS:
-                compassGizmo.setToggleKey(key);
-                break;
+
+
         }
     }
 
@@ -219,9 +215,6 @@ public class GizmoManager {
                 break;
             case SCALE:
                 scaleGizmo.enable(target);
-                break;
-            case COMPASS:
-                compassGizmo.enable(target);
                 break;
                 case NULL:
                     disableAll();
@@ -249,6 +242,35 @@ public class GizmoManager {
         GizmoType[] types = category.getTypes();
         for(GizmoType type : types){
             disableGizmo(type);
+        }
+    }
+
+    public void setCurrentGizmo(GizmoType type){
+        disableAll();
+        switch(type){
+            case TRANSLATE:
+                translateGizmo.enable(target);
+                break;
+            case ROTATE:
+                rotateGizmo.enable(target);
+                break;
+            case SCALE:
+                scaleGizmo.enable(target);
+                break;
+
+        }
+    }
+
+    public void setIfNotCurrent(GizmoType type){
+        if(!gizmoMap.get(type).enabled){
+            setCurrentGizmo(type);
+        }
+    }
+
+    public void setSharedTarget(GizmoTarget target){
+        this.gizmoTarget = target;
+        for(Gizmo gizmo : gizmos){
+            gizmo.setTarget(target);
         }
     }
 

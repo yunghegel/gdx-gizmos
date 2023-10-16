@@ -16,6 +16,7 @@ import com.badlogic.gdx.math.collision.Ray;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import org.yunghegel.gdx.gizmo.core.Gizmo;
+import org.yunghegel.gdx.gizmo.core.GizmoTarget;
 import org.yunghegel.gdx.gizmo.core.GizmoType;
 
 public class TranslateGizmo extends TransformGizmo {
@@ -82,8 +83,8 @@ public class TranslateGizmo extends TransformGizmo {
     }
 
     @Override
-    public void update(){
-
+    public void update(GizmoTarget gizmoTarget){
+        this.target = (TransformGizmoTarget) gizmoTarget;
         for (TranslateGizmoHandle handle : handles) {
             handle.update((target.getTransform()), camera);
         }
@@ -134,7 +135,7 @@ public class TranslateGizmo extends TransformGizmo {
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
 
         if (button == 0 && target !=null) {
-
+            interacting = true;
             TranslateGizmoHandle handle = (TranslateGizmoHandle)picker.pick(viewport,batch,camera,screenX,screenY,handlesArray);
             if (handle != null) {
                 state = TransformState.IDLE;
@@ -172,6 +173,7 @@ public class TranslateGizmo extends TransformGizmo {
     public boolean touchUp(int screenX, int screenY, int pointer, int button) {
         super.touchUp(screenX, screenY, pointer, button);
         state = TransformState.IDLE;
+        interacting = false;
         for(TranslateGizmoHandle handle : handles){
            handle.restoreColor();
         }
